@@ -1,8 +1,10 @@
-﻿#HotIf A_Clipboard != "" && shouldActivate()
+﻿#Include utils\line-breaks.ahk
+
+#HotIf A_Clipboard != "" && shouldActivate()
 ^v::
 {
     contents := ClipboardAll()
-    A_Clipboard := RegExReplace(A_Clipboard, "\s*[\n\r]\s*", " ")
+    A_Clipboard := removeLineBreaks(A_Clipboard)
     Send "^v"
     ; restore after paste
     Sleep 50
