@@ -5,7 +5,7 @@
     A_Clipboard := RegExReplace(A_Clipboard, "[\n\r]", "")
     Send "^v"
     ; restore after paste
-    Sleep 10
+    Sleep 50
     A_Clipboard := contents
     contents := ""
 }
