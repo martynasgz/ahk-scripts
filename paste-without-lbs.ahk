@@ -2,7 +2,7 @@
 ^v::
 {
     contents := ClipboardAll()
-    A_Clipboard := RegExReplace(A_Clipboard, "[\n\r]", "")
+    A_Clipboard := RegExReplace(A_Clipboard, "\s*[\n\r]\s*", " ")
     Send "^v"
     ; restore after paste
     Sleep 50
