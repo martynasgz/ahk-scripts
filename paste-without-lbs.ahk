@@ -16,5 +16,5 @@
 ; change according to needs
 shouldActivate() {
     return WinActive("ahk_exe ApplicationFrameHost.exe")
-    && WinGetTitle(WinActive("A")) ~= "OneNote"
+    && WinGetTitle(WinActive()) ~= "OneNote"
 }
